@@ -6,11 +6,11 @@ export default class Header extends Component {
     return (
       <div>
         <header className='Pulse-header'>
-          <h1>Pulse</h1>
+          <h1>Edmunds</h1>
           <div className='Pulse-links'>
-            <IndexLink to='/' activeClassName='active'>All Events</IndexLink>  
-            <Link to='/my-events' activeClassName='active'>My Events</Link>
-            <Link to='/other-events' activeClassName='active'>Other Events</Link>
+            <IndexLink to='/' activeClassName='active'>Home</IndexLink>
+            <Link to='/search/Honda/Accord' activeClassName='active'>Search</Link>
+            <a href="#">Add new Car</a>
           </div>
         </header>
       </div>

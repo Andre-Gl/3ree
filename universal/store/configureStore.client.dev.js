@@ -7,14 +7,14 @@ import { syncHistory, routeReducer } from 'react-router-redux';
 import DevTools from '../containers/devTools';
 import { persistState } from 'redux-devtools';
 
-import pulseApp from '../reducers';
+import hubApp from '../reducers';
 
 // Grab the state from a global injected into server-generated HTML
 const initialState = window.__INITIAL_STATE__;
 
 const rootReducer = combineReducers({
   routing: routeReducer,
-  pulseApp
+  hubApp
 });
 
 // Sync dispatched route actions to the history
@@ -36,7 +36,7 @@ if (module.hot) {
   module.hot.accept('../reducers', () =>
     store.replaceReducer(combineReducers({
       routing: routeReducer,
-      pulseApp: require('../reducers')
+      hubApp: require('../reducers')
     }))
   );
 };

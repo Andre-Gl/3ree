@@ -1,15 +1,13 @@
 import React from 'react';
 import { Route, IndexRoute } from 'react-router';
 
-import PulseApp from './containers/PulseApp';
-import MyEvents from './containers/MyEvents';
-
-import OtherEvents from './containers/OtherEvents';
+import HubApp from './containers/HubApp';
+import HubHome from './containers/HubHome';
+import HubSearch from './containers/HubSearch';
 
 export default (
-  <Route path='/' component={PulseApp}>
-    <IndexRoute components={{myEvents: MyEvents, otherEvents: OtherEvents}} />
-    <Route path='my-events' components={{myEvents: MyEvents}} />
-    <Route path='other-events' components={{otherEvents: OtherEvents}} />
+  <Route path='/' component={HubApp}>
+    <IndexRoute component={HubHome} />
+    <Route path='search/:make/:model' component={HubSearch} />
   </Route>
 );

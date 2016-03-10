@@ -4,14 +4,14 @@ import thunkMiddleware from 'redux-thunk';
 import { syncHistory, routeReducer } from 'react-router-redux';
 import { persistState } from 'redux-devtools';
 
-import pulseApp from '../reducers';
+import hubApp from '../reducers';
 import DevTools from '../containers/devTools';
 
 export default (req, initialState) => {
   console.log('Server router!');
   const rootReducer = combineReducers({
     routing: routeReducer,
-    pulseApp
+    hubApp
   });
 
   const reduxRouterMiddleware = syncHistory(createHistory());

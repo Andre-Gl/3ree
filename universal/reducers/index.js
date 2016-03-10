@@ -1,8 +1,8 @@
 import { combineReducers } from 'redux';
-import pulses from './pulse';
+import hub from './hub';
 
 // const rootReducer = combineReducers({
-//   pulses
+//   hub
 // });
 
-export default pulses;
+export default hub;
